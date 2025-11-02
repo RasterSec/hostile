@@ -165,7 +165,6 @@ func IsHyperV() bool {
 			return true
 		}
 	}
-
 	return false
 }
 
