@@ -5,8 +5,10 @@
 Hostile is intended to be ran from inside of a Linux VM (eg. a VPS). It's useful for conducting black box penetration tests in virtualized environments. Instead of suggesting CVEs based on vulnerable versions, Hostile searches for common misconfigurations.
 
 Enumeration and checks for:
+
 - Containers:
     * LXC/LXD
+    * OpenVZ
 - Hypervisors:
     * Xen
     * VMware
@@ -16,6 +18,7 @@ Enumeration and checks for:
     * Proxmox
     * XCP-NG
     * OpenStack
+    * SolusVM
 - Network:
     * IPv4 spoofing
     * IPv6 spoofing
