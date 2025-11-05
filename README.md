@@ -1,4 +1,4 @@
-# Hostile
+# <a href="https://www.hostile.wiki"><img src="https://www.hostile.wiki/hostileproject.png" width=70 /></a> Hostile
 
 **Host**ile is a framework and tooling for security testing virtualized environments such as hosting provider infrastructure. It provides guides on how to harden common hypervisors and containers.
 
