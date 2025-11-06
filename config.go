@@ -33,13 +33,13 @@ func parseArgs() {
 	config.Mode = os.Args[1]
 
 	switch config.Mode {
-	case "enum":
-		enumCmd := flag.NewFlagSet("enum", flag.ExitOnError)
-		enumCmd.String("output-format", "text", "Output format (html, text, json)")
-		enumCmd.String("output-file", "hostile-report", "Name of the output report file")
-		enumCmd.Parse(os.Args[2:])
-		config.OutputFormat = getStringFlag(enumCmd, "output-format")
-		config.OutputFile = getStringFlag(enumCmd, "output-file")
+	case "detect":
+		detectCmd := flag.NewFlagSet("detect", flag.ExitOnError)
+		detectCmd.String("output-format", "text", "Output format (html, text, json)")
+		detectCmd.String("output-file", "hostile-report", "Name of the output report file")
+		detectCmd.Parse(os.Args[2:])
+		config.OutputFormat = getStringFlag(detectCmd, "output-format")
+		config.OutputFile = getStringFlag(detectCmd, "output-file")
 
 	case "scan":
 		scanCmd := flag.NewFlagSet("scan", flag.ExitOnError)
@@ -113,8 +113,8 @@ func getBoolFlag(fs *flag.FlagSet, name string) bool {
 func printUsage() {
 	fmt.Println("Usage: hostile <command> [options]")
 	fmt.Println("\nCommands:")
-	fmt.Println("  enum                 Discover container/hypervisor and resources")
-	fmt.Println("  scan                 Perform hardening checks")
+	fmt.Println("  detect               Discover container/hypervisor and resources")
+	fmt.Println("  scan                 Perform security hardening checks")
 	fmt.Println("  network              Network spoofing operations")
 	fmt.Println("  all                  Run all operations")
 	fmt.Println("\nGlobal Options:")
@@ -129,7 +129,7 @@ func printUsage() {
 	fmt.Println("  -ipv6                Spoof IPv6 (auto-detected if -ip is provided)")
 	fmt.Println("  -ip                  Set this IP when spoofing (auto-detects IPv4/IPv6)")
 	fmt.Println("\nExamples:")
-	fmt.Println("  hostile enum")
+	fmt.Println("  hostile detect")
 	fmt.Println("  hostile scan -tech lxc -output-format json")
 	fmt.Println("  hostile network -spoof -ip 1.2.3.4 -interface eth0")
 	fmt.Println("  hostile network -spoof -ipv6 -interface eth0")
