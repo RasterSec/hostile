@@ -25,6 +25,7 @@ Enumeration and checks for:
     * Host/router access
 - Misc:
     * Cloud-init scripts/configuration
+    * Random Number Generator (RNG) device
 
 ## Features
 
@@ -33,4 +34,4 @@ Enumeration and checks for:
 - Hardening checks
 - HTML reports
 
-Here is a list of hardening checks implented. For detailed explanations and references see the [Hostile wiki]().
+Here is a list of hardening checks implented. For detailed explanations and references see the [Hostile wiki](https://www.hostile.wiki).
